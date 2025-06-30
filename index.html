@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZonaDeporte - Catálogo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+    }
+
+    .topbar {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #00c853;
+      letter-spacing: 1px;
+    }
+
+    .main-wrapper {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .box {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      max-width: 260px;
+      flex: 1 1 240px;
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.04);
+    }
+
+    .image-area {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .text-zone {
+      padding: 1rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      color: #03a9f4;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 0.8rem;
+    }
+
+    .price-tag {
+      font-size: 1.1rem;
+      color: #8bc34a;
+      margin-bottom: 1rem;
+    }
+
+    .price-tag del {
+      font-size: 0.9rem;
+      color: #888;
+      margin-right: 5px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btnx {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+      background: #00c853;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btnx.secondary {
+      background: transparent;
+      color: #00c853;
+      border: 1px solid #00c853;
+    }
+
+    /* Indicador de dispositivo */
+    .tipo-dispositivo {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #263238;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+
+    .tipo-dispositivo::before {
+      content: "📱 Teléfono";
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .tipo-dispositivo::before { content: "💻 Tableta"; }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      .tipo-dispositivo::before { content: "🖥️ Escritorio"; }
+    }
+
+    @media (min-width: 1440px) {
+      .tipo-dispositivo::before { content: "🖥️ Pantalla grande"; }
+    }
+
+    @media (max-width: 600px) {
+      .product-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Indicador de dispositivo -->
+  <div class="tipo-dispositivo"></div>
+
+  <div class="topbar">ZonaDeporte 🏆</div>
+
+  <section class="main-wrapper">
+    <div class="product-list">
+
+      <!-- Producto 1: Guayos -->
+      <div class="box">
+        <div class="image-area" style="background-image: url('https://unitedstorecolombia.com/cdn/shop/files/92005b31.jpg?v=1720624246&width=800');"></div>
+        <div class="text-zone">
+          <div class="title">Guayos Predator Elite</div>
+          <div class="desc">Lengüeta Plegable para terreno firme. Gran tracción y confort.</div>
+          <div class="price-tag"><del>$500</del> $300</div>
+          <div class="actions">
+            <button class="btnx">Comprar</button>
+            <button class="btnx secondary">Detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2: Guantes -->
+      <div class="box">
+        <div class="image-area" style="background-image: url('https://i.ebayimg.com/thumbs/images/g/xesAAOSw14Bj2NXM/s-l1200.jpg');"></div>
+        <div class="text-zone">
+          <div class="title">Guantes Nike Academy</div>
+          <div class="desc">Therma-FIT para niño/a, excelente agarre y protección térmica.</div>
+          <div class="price-tag"><del>$65</del> $49</div>
+          <div class="actions">
+            <button class="btnx">Comprar</button>
+            <button class="btnx secondary">Comparar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3: Medias -->
+      <div class="box">
+        <div class="image-area" style="background-image: url('https://images.puma.com/image/upload/w_800/global/774993/02/fnd/EEA/fmt/png');"></div>
+        <div class="text-zone">
+          <div class="title">Medias PUMA Dortmund</div>
+          <div class="desc">Edición 24/25. Diseño deportivo, ideal para entreno y partido.</div>
+          <div class="price-tag">$19</div>
+          <div class="actions">
+            <button class="btnx">Comprar</button>
+            <button class="btnx secondary">Info</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4: Canilleras -->
+      <div class="box">
+        <div class="image-area" style="background-image: url('https://static.dafiti.com.co/p/new-balance-7647-2721072-1-product.jpg');"></div>
+        <div class="text-zone">
+          <div class="title">Canilleras New Balance</div>
+          <div class="desc">Modelo Furon League, color verde, ajustables y ligeras.</div>
+          <div class="price-tag">$29</div>
+          <div class="actions">
+            <button class="btnx">Comprar</button>
+            <button class="btnx secondary">Detalles</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
