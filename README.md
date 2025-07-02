@@ -19,6 +19,13 @@ Este proyecto es una página web de ejemplo desarrollada en HTML y CSS puro, que
 ##  Estructura
 
 actividad_6/
+├──_css
+├  ├──styles.css
+├──_img
+├  ├──image1.png
+├  ├──image2.png
+├  ├──image3.png
+├  ├──image4.png
 ├── index.html
 ├── README.md
 
